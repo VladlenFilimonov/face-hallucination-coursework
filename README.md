@@ -12,9 +12,9 @@
 
 ## 3. Technical Requirements:
    - Programming Language: Python
-   - Deep Learning Framework: TensorFlow or PyTorch (TBD)
-   - Dataset: CelebA dataset or equivalent (TBD)
-   - Hardware: GPU with CUDA support for accelerated training (optional but recommended)
+   - Deep Learning Framework: PyTorch
+   - Dataset: Flickr-Faces-HQ Dataset (FFHQ) thumbnails 128x128
+   - Hardware: GPU with CUDA support for accelerated training
    - Software Libraries: OpenCV, NumPy, Matplotlib
 
 ## 4. System Architecture:
@@ -48,44 +48,4 @@
 
 
 ----
-### Convolutional Neural Network (CNN) Architectures (TBD):
-   - **SRCNN (Super-Resolution Convolutional Neural Network):** A simple yet effective architecture for single-image super-resolution.
-   - **VDSR (Very Deep Super-Resolution):** Utilizes a very deep network with residual learning to reconstruct high-resolution images.
-   - **SRGAN (Super-Resolution Generative Adversarial Network):** Combines adversarial and perceptual loss functions to generate visually pleasing high-resolution images.
-   - **EDSR (Enhanced Deep Super-Resolution):** Employs a deeper network with improved residual blocks for enhanced super-resolution performance.
-   - **RCAN (Residual Channel Attention Networks):** Focuses on capturing long-range dependencies in high-resolution images through channel attention mechanisms.
-
-### Datasets for Face-Hallucination (TBD):
-
-1. **LFW (Labeled Faces in the Wild):**
-   - LFW is a widely used dataset containing face images collected from the internet. While it primarily serves as a benchmark for face recognition, it can also be used for face-hallucination tasks.
-
-2. **CelebA:**
-   - CelebA is a large-scale dataset containing celebrity face images with diverse attributes. It includes annotations for various facial attributes such as pose, expression, and gender, making it suitable for face-hallucination experiments.
-
-3. **MegaFace:**
-   - MegaFace is a large-scale face recognition dataset containing images collected from the internet. It consists of images of celebrities and ordinary people, providing a diverse set of facial images for experimentation.
-
-4. **CUHK Face Sketch Database (CUFS):**
-   - CUFS is a dataset that pairs face photos with corresponding hand-drawn sketches. While originally intended for face sketch synthesis tasks, it can also be used for face-hallucination experiments by treating the sketches as low-resolution inputs.
-
-5. **FDDB (Face Detection Data Set and Benchmark):**
-   - FDDB is a dataset commonly used for face detection tasks. It contains annotated images with bounding boxes around detected faces. While not explicitly designed for face-hallucination, it can be used for experiments in enhancing low-resolution face regions within images.
-
-6. **Self-Collected Datasets:**
-   - Collect your own dataset by capturing low-resolution face images using a variety of devices or imaging conditions. Pair these low-resolution images with their corresponding high-resolution versions obtained from the same subjects under controlled conditions.
-
-7. **MORPH Album 2:**
-   - MORPH is a longitudinal face database containing images of individuals taken over time. MORPH Album 2 specifically includes a collection of face images with varying ages, expressions, and lighting conditions, providing a suitable dataset for face-hallucination experiments.
-
-8. **WIDER Face:**
-   - WIDER Face is a face detection benchmark dataset containing images with a wide range of variations in scale, pose, and occlusion. While its primary use is for face detection tasks, it can also be utilized for face-hallucination experiments.
-
-9. **IMDB-WIKI dataset:**
-   - The IMDB-WIKI dataset contains face images collected from IMDb and Wikipedia. It includes annotations such as age and gender labels, making it suitable for various face-related tasks, including face-hallucination.
-
-10. **Yale Face Database:**
-    - The Yale Face Database consists of grayscale images of faces under different lighting conditions. While relatively small compared to other datasets, it can be useful for exploring face-hallucination techniques under controlled lighting variations.
-
-These datasets vary in size, complexity, and annotation quality, allowing you to choose one that best aligns with your coursework objectives and resources. Additionally, you can consider combinations of these datasets or augmentations to increase diversity and challenge in your experiments.
 

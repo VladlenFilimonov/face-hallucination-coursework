@@ -1,0 +1,6 @@
+git+https://github.com/tensorlayer/tensorlayerx.git
+numpy>=1.16.1
+easydict==1.9
+opencv-python>=4.5.1.48
+torch==2.2.2+cu121
+torchvision==0.17.2+cu121
