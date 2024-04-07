@@ -1,5 +1,7 @@
 import torch
 from torch import nn
+import torch.optim as optim
+from loss import GeneratorLoss
 
 
 class Generator(nn.Module):
@@ -119,3 +121,22 @@ class UpsampleBLock(nn.Module):
         x = self.pixel_shuffle(x)
         x = self.prelu(x)
         return x
+
+
+class SrganNetwork:
+    def __init__(self):
+        self.net_g = Generator()
+        print('# generator parameters:', sum(param.numel() for param in self.net_g.parameters()))
+        self.net_d = Discriminator()
+        print('# discriminator parameters:', sum(param.numel() for param in self.net_d.parameters()))
+
+        self.loss_function = GeneratorLoss()
+
+        if torch.cuda.is_available():
+            self.net_g.cuda()
+            self.net_d.cuda()
+            self.loss_function.cuda()
+
+        self.optimizer_g = optim.Adam(self.net_g.parameters())
+        self.optimizer_d = optim.Adam(self.net_d.parameters())
+

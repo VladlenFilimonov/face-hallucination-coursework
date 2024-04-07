@@ -3,7 +3,16 @@ from os.path import join
 
 from PIL import Image
 from torch.utils.data.dataset import Dataset
-from torchvision.transforms import Compose, ToTensor, ToPILImage, CenterCrop, Resize, Normalize
+from torchvision.transforms import Compose, ToTensor, ToPILImage, CenterCrop, Resize
+from torch.utils.data import DataLoader
+
+
+class SrganDataLoader:
+    def __init__(self, dataset_dir, batch_size):
+        train_data_set = TrainDatasetFromFolder(dataset_dir + "/train")
+        self.train_loader = DataLoader(dataset=train_data_set, num_workers=4, batch_size=batch_size, shuffle=True)
+        valid_data_set = ValidationDatasetFromFolder(dataset_dir + "/valid")
+        self.valid_loader = DataLoader(dataset=valid_data_set, num_workers=4, batch_size=1, shuffle=False)
 
 
 class TrainDatasetFromFolder(Dataset):
