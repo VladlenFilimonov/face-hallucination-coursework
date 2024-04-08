@@ -17,6 +17,7 @@
    - Software Libraries: OpenCV, NumPy, Matplotlib
 
 ## 4. System Architecture:
+![SRGAN.png](notebook%2FSRGAN.png)
    - The Face-Hallucination system will consist of the following components:
      - Convolutional Neural Network (CNN): The core component for generating high-resolution facial images using the SRGAN model.
      - User Interface: Allows users to input low-resolution images and visualize the generated high-resolution results.
@@ -29,7 +30,7 @@
    - `train`: Script for training the SRGAN model, incorporating techniques such as batch normalization and residual connections.
 
 ## 5. Model Training:
-   - Train the CNN using a combination of adversarial and reconstruction loss functions inherent to the SRGAN model.
+   - Train the CNN using a combination of perception, adversarial, content and total variation loss functions inherent to the SRGAN model.
    - Utilize techniques such as batch normalization and residual connections to stabilize training and improve convergence.
    - Validate the trained model using a separate validation set to ensure generalization.
 
